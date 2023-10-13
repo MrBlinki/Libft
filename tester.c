@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:35:16 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/13 18:50:00 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,12 @@ int	main(void)
 	printf("ft_isalnum('a'):	%d\n", ft_isalnum('a'));
 	printf("isalnum(' '):		%d\n", isalnum(' '));
 	printf("ft_isalnum(' '):	%d\n", ft_isalnum(' '));
+	printf("\n========== FT_ISASCII ==========\n");
+	printf("isascii(0):		%d\n", isascii(0));
+	printf("ft_isascii(0):		%d\n", ft_isascii(0));
+	printf("isascii(-1):		%d\n", isascii(-1));
+	printf("ft_isascii(-1):		%d\n", ft_isascii(-1));
+	printf("isascii(127):		%d\n", isascii(127));
+	printf("ft_isascii(127):	%d\n", ft_isascii(127));
 	return (0);
 }
