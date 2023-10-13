@@ -5,6 +5,8 @@ OBJ = $(SRC:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+.PHONY : all clean fclean re
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
@@ -22,6 +24,8 @@ fclean : clean
 re : fclean all
 
 # Testing part
+.PHONY : test tclean
+
 test : a.out
 
 a.out : $(OBJ) tester.o
@@ -30,7 +34,7 @@ a.out : $(OBJ) tester.o
 tester.o : tester.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 	
-testclean :
+tclean :
 	rm -f $(OBJ)
 	rm -f tester.o
 	rm -f a.out
