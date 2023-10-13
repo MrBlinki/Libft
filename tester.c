@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:27:16 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/13 18:35:16 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,14 @@ int	main(void)
 	printf("ft_isdigit('a'):	%d\n", ft_isdigit('a'));
 	printf("isdigit('9'):		%d\n", isdigit('9'));
 	printf("ft_isdigit('9'):	%d\n", ft_isdigit('9'));
+	printf("\n========== FT_ISALNUM ==========\n");
+	printf("isalnum('0'):		%d\n", isalnum('0'));
+	printf("ft_isalnum('0'):	%d\n", ft_isalnum('0'));
+	printf("isalnum('~'):		%d\n", isalnum('~'));
+	printf("ft_isalnum('~'):	%d\n", ft_isalnum('~'));
+	printf("isalnum('a'):		%d\n", isalnum('a'));
+	printf("ft_isalnum('a'):	%d\n", ft_isalnum('a'));
+	printf("isalnum(' '):		%d\n", isalnum(' '));
+	printf("ft_isalnum(' '):	%d\n", ft_isalnum(' '));
 	return (0);
 }
