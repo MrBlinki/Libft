@@ -6,14 +6,14 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:26:56 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 10:58:39 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/13 14:13:20 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+# include <stdio.h>		// include for size_t type
 
 // Part1 - Libc functions
 int		ft_isalpha(int c);

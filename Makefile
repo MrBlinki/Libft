@@ -1,0 +1,36 @@
+NAME = libft.a
+SRC = ft_isalpha.c
+OBJ = $(SRC:.c=.o)
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+all : $(NAME)
+
+$(NAME) : $(OBJ)
+	ar -r $(NAME) $(OBJ)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean :
+	rm -f $(OBJ)
+
+fclean : clean
+	rm -f $(NAME)
+
+re : fclean all
+
+# Testing part
+test : a.out
+
+a.out : $(OBJ) tester.o
+	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@
+
+tester.o : tester.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+	
+testclean :
+	rm -f $(OBJ)
+	rm -f tester.o
+	rm -f a.out
