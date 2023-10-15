@@ -6,10 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:37:43 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:42:51 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:03:04 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns non-zero if c is ascii, zero if not
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

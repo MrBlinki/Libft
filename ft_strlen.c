@@ -6,12 +6,13 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:09:51 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 13:47:04 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:00:27 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
+// Returns length of the string s
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;

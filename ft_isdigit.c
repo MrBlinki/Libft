@@ -6,10 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:20:20 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:22:45 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:02:39 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns non-zero if c is a digit, zero if not
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

@@ -6,10 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:29:30 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:56 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:03:32 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns non-zero if c is a letter or a digit, zero if not
 #include "libft.h"
 
 int	ft_isalnum(int c)

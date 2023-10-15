@@ -6,10 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:50:52 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 13:08:08 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:02:07 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns non-zero if c is printable, zero if not
 int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')

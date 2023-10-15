@@ -6,10 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 20:14:12 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 11:05:44 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:03:17 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns non-zero if c is a letter, zero if not
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
