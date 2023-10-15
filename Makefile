@@ -1,18 +1,18 @@
 NAME = libft.a
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)	# Each source file, ".c" replaced by ".o"
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re	# Targets that aren't files
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
-%.o : %.c
+%.o : %.c	# Each .o file depends on the .c with the same name
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean :
