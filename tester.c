@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/13 18:50:00 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 13:07:09 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,14 @@ int	main(void)
 	printf("ft_isascii(-1):		%d\n", ft_isascii(-1));
 	printf("isascii(127):		%d\n", isascii(127));
 	printf("ft_isascii(127):	%d\n", ft_isascii(127));
+	printf("\n========== FT_ISPRINT ==========\n");
+	printf("isprint(' '):		%d\n", isprint(' '));
+	printf("ft_isprint(' '):	%d\n", ft_isprint(' '));
+	printf("isprint(127):		%d\n", isprint(127));
+	printf("ft_isprint(127):	%d\n", ft_isprint(127));
+	printf("isprint('~'):		%d\n", isprint('~'));
+	printf("ft_isprint('~'):	%d\n", ft_isprint('~'));
+	printf("isprint(31):		%d\n", isprint(31));
+	printf("ft_isprint(31):		%d\n", ft_isprint(31));
 	return (0);
 }
