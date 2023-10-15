@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 13:35:17 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 15:53:40 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <ctype.h>
 #include <string.h>
+#include <unistd.h>
 
 int	main(void)
 {
@@ -67,5 +68,11 @@ int	main(void)
 	printf("ft_strlen(\"	\"):		%ld\n", ft_strlen("	"));
 	printf("strlen(\"  test  \\n\")		%ld\n", strlen("  test  \n"));
 	printf("ft_strlen(\"  test  \\n\"):	%ld\n", ft_strlen("  test  \n"));
+	printf("\n========== FT_MEMSET ==========\n");
+	char	b[20];
+	write(1, memset(b, 'a', 20), 20);
+	write(1, "\n", 1);
+	write(1, ft_memset(b, 'b', 10), 20);
+	write(1, "\n", 1);
 	return (0);
 }
