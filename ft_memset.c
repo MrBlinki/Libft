@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:50:22 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 16:01:01 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:12:31 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	while (i < len)
-	{
-		((unsigned char *)b)[i] = (unsigned char) c;
-		i++;
-	}
+		((unsigned char *)b)[i++] = (unsigned char) c;
 	return (b);
 }
