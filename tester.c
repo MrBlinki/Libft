@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 15:53:40 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 16:53:12 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
+#include <strings.h>
 
 int	main(void)
 {
@@ -73,6 +74,13 @@ int	main(void)
 	write(1, memset(b, 'a', 20), 20);
 	write(1, "\n", 1);
 	write(1, ft_memset(b, 'b', 10), 20);
+	write(1, "\n", 1);
+	printf("\n========== FT_BZERO ==========\n");
+	bzero(b, 10);
+	write(1, b, 20);
+	write(1, "\n", 1);
+	ft_bzero(b, 18);
+	write(1, b, 20);
 	write(1, "\n", 1);
 	return (0);
 }
