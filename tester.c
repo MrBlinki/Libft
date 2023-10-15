@@ -6,13 +6,14 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 13:07:09 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/15 13:35:17 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #include <ctype.h>
+#include <string.h>
 
 int	main(void)
 {
@@ -57,5 +58,14 @@ int	main(void)
 	printf("ft_isprint('~'):	%d\n", ft_isprint('~'));
 	printf("isprint(31):		%d\n", isprint(31));
 	printf("ft_isprint(31):		%d\n", ft_isprint(31));
+	printf("\n========== FT_STRLEN ==========\n");
+	printf("strlen(\"Hello World\")		%ld\n", strlen("Hello World"));
+	printf("ft_strlen(\"Hello World\"):	%ld\n", ft_strlen("Hello World"));
+	printf("strlen(\"\")			%ld\n", strlen(""));
+	printf("ft_strlen(\"\"):			%ld\n", ft_strlen(""));
+	printf("strlen(\"	\")		%ld\n", strlen("	"));
+	printf("ft_strlen(\"	\"):		%ld\n", ft_strlen("	"));
+	printf("strlen(\"  test  \\n\")		%ld\n", strlen("  test  \n"));
+	printf("ft_strlen(\"  test  \\n\"):	%ld\n", ft_strlen("  test  \n"));
 	return (0);
 }
