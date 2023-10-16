@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 17:53:34 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/16 10:07:20 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,17 +70,21 @@ int	main(void)
 	printf("ft_strlen(\"  test  \\n\"):	%ld\n", ft_strlen("  test  \n"));
 	printf("\n========== FT_MEMSET ==========\n");
 	char	b[20];
-	write(1, memset(b, 'a', 20), 20);
+	write(1, "Setting 20 bytes to 'a': ", 25);
+	write(1, ft_memset(b, 'a', 20), 20);
 	write(1, "\n", 1);
+	write(1, "Setting 10 bytes to 'b': ", 25);
 	write(1, ft_memset(b, 'b', 10), 20);
 	write(1, "\n", 1);
 	printf("\n========== FT_BZERO ==========\n");
+	write(1, "ft_bzero on 16 bytes: ", 22);
 	ft_bzero(b, 16);
 	write(1, b, 20);
 	write(1, "\n", 1);
 	printf("\n========== FT_MEMCPY ==========\n");
 	char	src[6] = "Hello";
 	char	dst[6];
+	write(1, "ft_memcpy 6 bytes from src, dst: ", 33);
 	write(1, ft_memcpy(dst, src, 6), 6);
 	write(1, "\n", 1);
 	return (0);
