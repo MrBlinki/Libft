@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/16 14:14:43 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/16 17:17:40 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,15 @@ int	main(void)
 	write(1, "\n", 1);
 	printf("\n========== FT_MEMMOVE ==========\n");
 	char	src2[12] = "Hello World";
+	write(1, "ft_memmove(src+2, src, 5):", 26);
 	write(1, ft_memmove(src2+2, src2, 5), 20);
+	write(1, "\n", 1);
+	printf("\n========== FT_STRLCPY ==========\n");
+	char	str[] = "abcd";
+	char	str2[4];
+	printf("Value returned by strlcpy:	%ld\n", strlcpy(str2, str, 4));
+	printf("Copied string:			%s\n", str2);
+	printf("Value returned by ft_strlcpy: 	%ld\n", ft_strlcpy(str2, str, 4));
+	printf("Copied string:			%s\n", str2);
 	return (0);
 }
