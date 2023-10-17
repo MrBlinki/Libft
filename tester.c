@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 10:21:54 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 11:32:21 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,15 @@ int	main(void)
 	printf("ft_tolower('Z'): 	%c\n", ft_tolower('Z'));
 	printf("tolower(4): 		%c\n", tolower(4));
 	printf("ft_tolower(4): 	%c\n", ft_tolower(4));
+	printf("\n========== FT_TOLOWER ==========\n");
+	char	str_tosearch[] = "abcdefghijklmnopqrstuvwxyz12345";
+	printf("Looking for 'm' with strchr:		%p\n", strchr(str_tosearch, 'm'));
+	printf("Looking for 'm' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'm'));
+	printf("Looking for 'a' with strchr:		%p\n", strchr(str_tosearch, 'a'));
+	printf("Looking for 'a' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'a'));
+	printf("Looking for 'A' with strchr:		%p\n", strchr(str_tosearch, 'A'));
+	printf("Looking for 'A' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'A'));
+	printf("Looking for '\\0' with strchr:		%p\n", strchr(str_tosearch, '\0'));
+	printf("Looking for '\\0' with ft_strchr:	%p\n", ft_strchr(str_tosearch, '\0'));
 	return (0);
 }
