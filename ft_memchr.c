@@ -6,11 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:27:42 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 15:10:06 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 15:21:23 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdio.h>
+#include <stdio.h>
 
 // Searches for c in the memory starting at s for n bytes
 void	*ft_memchr(const void *s, int c, size_t n)
