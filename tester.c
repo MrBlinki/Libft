@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 09:59:35 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 10:21:54 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,14 @@ int	main(void)
 	printf("ft_toupper('Z'): 	%c\n", ft_toupper('Z'));
 	printf("toupper(4): 		%c\n", toupper(4));
 	printf("ft_toupper(4): 	%c\n", ft_toupper(4));
+	printf("\n========== FT_TOLOWER ==========\n");
+	printf("tolower('a'): 		%c\n", tolower('a'));
+	printf("ft_tolower('a'): 	%c\n", ft_tolower('a'));
+	printf("tolower('4'): 		%c\n", tolower('4'));
+	printf("ft_tolower('4'): 	%c\n", ft_tolower('4'));
+	printf("tolower('Z'): 		%c\n", tolower('Z'));
+	printf("ft_tolower('Z'): 	%c\n", ft_tolower('Z'));
+	printf("tolower(4): 		%c\n", tolower(4));
+	printf("ft_tolower(4): 	%c\n", ft_tolower(4));
 	return (0);
 }
