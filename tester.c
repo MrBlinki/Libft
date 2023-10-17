@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 11:32:21 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 13:05:08 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,8 @@ int	main(void)
 	printf("ft_tolower('Z'): 	%c\n", ft_tolower('Z'));
 	printf("tolower(4): 		%c\n", tolower(4));
 	printf("ft_tolower(4): 	%c\n", ft_tolower(4));
-	printf("\n========== FT_TOLOWER ==========\n");
-	char	str_tosearch[] = "abcdefghijklmnopqrstuvwxyz12345";
+	printf("\n========== FT_STRCHR ==========\n");
+	char	str_tosearch[] = "abcdefghijklmnopqrstuvwxyz12345ddaa";
 	printf("Looking for 'm' with strchr:		%p\n", strchr(str_tosearch, 'm'));
 	printf("Looking for 'm' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'm'));
 	printf("Looking for 'a' with strchr:		%p\n", strchr(str_tosearch, 'a'));
@@ -136,5 +136,14 @@ int	main(void)
 	printf("Looking for 'A' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'A'));
 	printf("Looking for '\\0' with strchr:		%p\n", strchr(str_tosearch, '\0'));
 	printf("Looking for '\\0' with ft_strchr:	%p\n", ft_strchr(str_tosearch, '\0'));
+	printf("\n========== FT_STRRCHR ==========\n");
+	printf("Looking for 'd' with strrchr:		%p\n", strrchr(str_tosearch, 'm'));
+	printf("Looking for 'd' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, 'm'));
+	printf("Looking for 'a' with strrchr:		%p\n", strrchr(str_tosearch, 'a'));
+	printf("Looking for 'a' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, 'a'));
+	printf("Looking for 'A' with strrchr:		%p\n", strrchr(str_tosearch, 'A'));
+	printf("Looking for 'A' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, 'A'));
+	printf("Looking for '\\0' with strrchr:		%p\n", strrchr(str_tosearch, '\0'));
+	printf("Looking for '\\0' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, '\0'));
 	return (0);
 }
