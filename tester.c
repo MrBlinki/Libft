@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/16 17:17:40 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 09:25:29 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,14 @@ int	main(void)
 	printf("Copied string:			%s\n", str2);
 	printf("Value returned by ft_strlcpy: 	%ld\n", ft_strlcpy(str2, str, 4));
 	printf("Copied string:			%s\n", str2);
+	printf("\n========== FT_STRLCAT ==========\n");
+	char	stra[20] = "Hello";
+	char	strb[] = "World";
+	char	strc[20] = "Hello";
+	char	strd[] = "World";
+	printf("Value returned by strlcat:	%ld\n", strlcat(stra, strb, 11));
+	printf("Concatenated string:		%s\n", stra);
+	printf("Value returned by ft_strlcat:	%ld\n", ft_strlcat(strc, strd, 11));
+	printf("Concatenated string:		%s\n", strc);
 	return (0);
 }
