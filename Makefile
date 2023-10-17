@@ -32,7 +32,7 @@ re : fclean all
 test : a.out
 
 a.out : $(OBJ) tester.o
-	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@
+	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@ -lbsd
 
 tester.o : tester.c
 	$(CC) $(CFLAGS) -c -o $@ $<

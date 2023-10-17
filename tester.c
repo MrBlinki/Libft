@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 16:39:46 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 23:20:26 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <ctype.h>
 #include <string.h>
+#include <bsd/string.h>	// BSD lib installed for ubuntu
 #include <unistd.h>
 
 int	main(void)
