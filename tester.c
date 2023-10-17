@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 09:25:29 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 09:59:35 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,14 @@ int	main(void)
 	printf("Concatenated string:		%s\n", stra);
 	printf("Value returned by ft_strlcat:	%ld\n", ft_strlcat(strc, strd, 11));
 	printf("Concatenated string:		%s\n", strc);
+	printf("\n========== FT_TOUPPER ==========\n");
+	printf("toupper('a'): 		%c\n", toupper('a'));
+	printf("ft_toupper('a'): 	%c\n", ft_toupper('a'));
+	printf("toupper('4'): 		%c\n", toupper('4'));
+	printf("ft_toupper('4'): 	%c\n", ft_toupper('4'));
+	printf("toupper('Z'): 		%c\n", toupper('Z'));
+	printf("ft_toupper('Z'): 	%c\n", ft_toupper('Z'));
+	printf("toupper(4): 		%c\n", toupper(4));
+	printf("ft_toupper(4): 	%c\n", ft_toupper(4));
 	return (0);
 }
