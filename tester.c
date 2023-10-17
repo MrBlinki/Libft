@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 15:18:50 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 16:25:21 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,5 +167,16 @@ int	main(void)
 	printf("ft_memchr 	searching 'm' on 50 bytes:	%p\n", ft_memchr(str_tosearch, 'm', 50));
 	printf("memchr 		searching '9' on 50 bytes:	%p\n", memchr(str_tosearch, '9', 50));
 	printf("ft_memchr 	searching '9' on 50 bytes:	%p\n", ft_memchr(str_tosearch, '9', 50));
+	printf("\n========== FT_MEMCMP ==========\n");
+	printf("memcmp		(\"aaa\", \"aaa\", 3):	%d\n", memcmp("aaa", "aaa", 3));
+	printf("ft_memcmp	(\"aaa\", \"aaa\", 3):	%d\n", ft_memcmp("aaa", "aaa", 3));
+	printf("memcmp		(\"aaa\", \"aab\", 3):	%d\n", memcmp("aaa", "aab", 3));
+	printf("ft_memcmp	(\"aaa\", \"aab\", 3):	%d\n", ft_memcmp("aaa", "aab", 3));
+	printf("memcmp		(\"aaa\", \"aab\", 2):	%d\n", memcmp("aaa", "aab", 2));
+	printf("ft_memcmp	(\"aaa\", \"aab\", 2):	%d\n", ft_memcmp("aaa", "aab", 2));
+	printf("memcmp		(\"aaa\", \"42ab\", 5):	%d\n", memcmp("aaa", "42ab", 5));
+	printf("ft_memcmp	(\"aaa\", \"42ab\", 5):	%d\n", ft_memcmp("aaa", "42ab", 5));
+	printf("memcmp		(\"aaa\", \"aaaa\", 5):	%d\n", memcmp("aaa", "aaaa", 5));
+	printf("ft_memcmp	(\"aaa\", \"aaaa\", 5):	%d\n", ft_memcmp("aaa", "aaaa", 5));
 	return (0);
 }
