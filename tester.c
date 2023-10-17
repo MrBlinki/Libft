@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 13:05:08 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/17 13:53:39 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,5 +145,16 @@ int	main(void)
 	printf("Looking for 'A' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, 'A'));
 	printf("Looking for '\\0' with strrchr:		%p\n", strrchr(str_tosearch, '\0'));
 	printf("Looking for '\\0' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, '\0'));
+	printf("\n========== FT_STRNCMP ==========\n");
+	printf("strncmp		(\"aaa\", \"aaa\", 3):	%d\n", strncmp("aaa", "aaa", 3));
+	printf("ft_strncmp	(\"aaa\", \"aaa\", 3):	%d\n", ft_strncmp("aaa", "aaa", 3));
+	printf("strncmp		(\"aaa\", \"aab\", 3):	%d\n", strncmp("aaa", "aab", 3));
+	printf("ft_strncmp	(\"aaa\", \"aab\", 3):	%d\n", ft_strncmp("aaa", "aab", 3));
+	printf("strncmp		(\"aaa\", \"aab\", 2):	%d\n", strncmp("aaa", "aab", 2));
+	printf("ft_strncmp	(\"aaa\", \"aab\", 2):	%d\n", ft_strncmp("aaa", "aab", 2));
+	printf("strncmp		(\"aaa\", \"42ab\", 5):	%d\n", strncmp("aaa", "42ab", 5));
+	printf("ft_strncmp	(\"aaa\", \"42ab\", 5):	%d\n", ft_strncmp("aaa", "42ab", 5));
+	printf("strncmp		(\"aaa\", \"aaaa\", 5):	%d\n", strncmp("aaa", "aaaa", 5));
+	printf("ft_strncmp	(\"aaa\", \"aaaa\", 5):	%d\n", ft_strncmp("aaa", "aaaa", 5));
 	return (0);
 }
