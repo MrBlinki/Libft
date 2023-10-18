@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 11:20:48 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/18 12:22:12 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 // BSD lib installed for ubuntu
 #ifdef __linux__
@@ -201,5 +202,32 @@ int	main(void)
 	printf("ft_strnstr 	looking for \"Hello\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "Hello", 32));
 	printf("strnstr 	looking for \"HelloWorld\" on 32 bytes:	%pn\n", strnstr(haystack, "HelloWorld", 32));
 	printf("ft_strnstr 	looking for \"HelloWorld\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "HelloWorld", 32));
+	printf("\n========== FT_ATOI ==========\n");
+	printf("atoi(\"\"):		%d\n", atoi(""));
+	printf("ft_atoi(\"\"):		%d\n", ft_atoi(""));
+	printf("atoi(\"abcd\"):		%d\n", atoi("abcd"));
+	printf("ft_atoi(\"abcd\"):	%d\n", ft_atoi("abcd"));
+	printf("atoi(\"42\"):		%d\n", atoi("42"));
+	printf("ft_atoi(\"42\"):		%d\n", ft_atoi("42"));
+	printf("atoi(\"42abc\"):		%d\n", atoi("42abc"));
+	printf("ft_atoi(\"42abc\"):	%d\n", ft_atoi("42abc"));
+	printf("atoi(\"abc123abc\"):	%d\n", atoi("abc123abc"));
+	printf("ft_atoi(\"abc123abc\"):	%d\n", ft_atoi("abc123abc"));
+	printf("atoi(\"   123\"):		%d\n", atoi("   123"));
+	printf("ft_atoi(\"   123\"):	%d\n", ft_atoi("   123"));
+	printf("atoi(\"+256\"):		%d\n", atoi("+256"));
+	printf("ft_atoi(\"+256\"):	%d\n", ft_atoi("+256"));
+	printf("atoi(\" ++256\"):		%d\n", atoi(" ++256"));
+	printf("ft_atoi(\" ++256\"):	%d\n", ft_atoi(" ++256"));
+	printf("atoi(\"-256\"):		%d\n", atoi("-256"));
+	printf("ft_atoi(\"-256\"):	%d\n", ft_atoi("-256"));
+	printf("atoi(\"--256\"):		%d\n", atoi("--256"));
+	printf("ft_atoi(\"--256\"):	%d\n", ft_atoi("--256"));
+	printf("atoi(\"-  256\"):		%d\n", atoi("-  256"));
+	printf("ft_atoi(\"-  256\"):	%d\n", ft_atoi("-  256"));
+	printf("atoi(\"-+256\"):		%d\n", atoi("-+256"));
+	printf("ft_atoi(\"-+256\"):	%d\n", ft_atoi("-+256"));
+	printf("atoi(\"+-256\"):		%d\n", atoi("+-256"));
+	printf("ft_atoi(\"+-256\"):	%d\n", ft_atoi("+-256"));
 	return (0);
 }
