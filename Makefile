@@ -3,19 +3,22 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
 ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c \
 ft_memchr.c ft_memcmp.c ft_strnstr.c
-OBJ = $(SRC:.c=.o)	# Each source file, ".c" replaced by ".o"
+#Each source file, ".c" replaced by ".o"
+OBJ = $(SRC:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-.PHONY : all clean fclean re	# Targets that aren't files
+#Targets that aren't files
+.PHONY : all clean fclean re
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
-%.o : %.c	# Each .o file depends on the .c with the same name
+#Each .o file depends on the .c with the same name
+%.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean :
@@ -27,12 +30,17 @@ fclean : clean
 re : fclean all
 
 # Testing part
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	BSDFLAG = -lbsd
+endif
+
 .PHONY : test tclean
 
 test : a.out
 
 a.out : $(OBJ) tester.o
-	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@ -lbsd
+	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@ $(BSDFLAG)
 
 tester.o : tester.c
 	$(CC) $(CFLAGS) -c -o $@ $<
