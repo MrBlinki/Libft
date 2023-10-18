@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 13:25:34 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 14:34:42 by maroth           ###   ########.fr       */
+/*   Created: 2023/10/18 14:33:19 by maroth            #+#    #+#             */
+/*   Updated: 2023/10/18 15:12:24 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates count * size bytes and fills area with 0
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strdup(const char *s1)
 {
-	void	*ptr;
+	char	*ptr;
+	size_t	len;
 
 	ptr = (void *)0;
-	ptr = malloc(count * size);
+	len = ft_strlen(s1);
+	ptr = ft_calloc(len, sizeof(char));
 	if (!ptr)
 		return ((void *)0);
-	ft_bzero(ptr, count * size);
+	ft_memmove(ptr, s1, len);
 	return (ptr);
 }

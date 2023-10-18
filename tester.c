@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 14:24:25 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:10:56 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,5 +235,12 @@ int	main(void)
 	ptr = ft_calloc(5, sizeof(char));
 	printf("Allocating with ft_calloc: %p\n", ptr);
 	free(ptr);
+	printf("\n========== FT_STRDUP ==========\n");
+	char	*copy;
+	copy = (void *)0;
+	copy = ft_strdup("Hello World !");
+	printf("Result of the copy : %s\n", copy);
+	printf("len of the copy: %ld\n", ft_strlen(copy));
+	free(copy);
 	return (0);
 }
