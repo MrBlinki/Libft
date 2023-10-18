@@ -6,16 +6,16 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 12:22:12 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:24:25 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 // BSD lib installed for ubuntu
 #ifdef __linux__
@@ -229,5 +229,11 @@ int	main(void)
 	printf("ft_atoi(\"-+256\"):	%d\n", ft_atoi("-+256"));
 	printf("atoi(\"+-256\"):		%d\n", atoi("+-256"));
 	printf("ft_atoi(\"+-256\"):	%d\n", ft_atoi("+-256"));
+	printf("\n========== FT_CALLOC ==========\n");
+	void	*ptr;
+	ptr = (void *)0;
+	ptr = ft_calloc(5, sizeof(char));
+	printf("Allocating with ft_calloc: %p\n", ptr);
+	free(ptr);
 	return (0);
 }

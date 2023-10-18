@@ -6,14 +6,14 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:26:56 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 17:01:26 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/18 13:50:48 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>		// include for size_t type
+# include <stdlib.h>		// include for size_t type
 
 // Part1 - Libc functions
 
