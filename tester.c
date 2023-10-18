@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 09:07:53 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/18 11:20:48 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,5 +187,19 @@ int	main(void)
 	printf("ft_memcmp	(\"aaa\", \"42ab\", 5):	%d\n", ft_memcmp("aaa", "42ab", 5));
 	printf("memcmp		(\"aaa\", \"aaaa\", 5):	%d\n", memcmp("aaa", "aaaa", 5));
 	printf("ft_memcmp	(\"aaa\", \"aaaa\", 5):	%d\n", ft_memcmp("aaa", "aaaa", 5));
+	printf("\n========== FT_STRNSTR ==========\n");
+	char	haystack[] = "adyqehdsHelloHelloWorldtest1234";
+	printf("strnstr 	looking for \"\" on 32 bytes:	%pn\n", strnstr(haystack, "", 32));
+	printf("ft_strnstr 	looking for \"\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "", 32));
+	printf("strnstr 	looking for \"test\" on 32 bytes:	%pn\n", strnstr(haystack, "test", 32));
+	printf("ft_strnstr 	looking for \"test\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "test", 32));
+	printf("strnstr 	looking for \"test\" on 27 bytes:	%pn\n", strnstr(haystack, "test", 27));
+	printf("ft_strnstr 	looking for \"test\" on 27 bytes:	%pn\n", ft_strnstr(haystack, "test", 27));
+	printf("strnstr 	looking for \"test\" on 26 bytes:	%pn\n", strnstr(haystack, "test", 26));
+	printf("ft_strnstr 	looking for \"test\" on 26 bytes:	%pn\n", ft_strnstr(haystack, "test", 26));
+	printf("strnstr 	looking for \"Hello\" on 32 bytes:	%pn\n", strnstr(haystack, "Hello", 32));
+	printf("ft_strnstr 	looking for \"Hello\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "Hello", 32));
+	printf("strnstr 	looking for \"HelloWorld\" on 32 bytes:	%pn\n", strnstr(haystack, "HelloWorld", 32));
+	printf("ft_strnstr 	looking for \"HelloWorld\" on 32 bytes:	%pn\n", ft_strnstr(haystack, "HelloWorld", 32));
 	return (0);
 }
