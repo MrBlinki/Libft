@@ -6,11 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:27:10 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/19 14:37:39 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:41:25 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 // Allocates (with malloc(3)) and returns a substring from the string ’s’.
 // The substring begins at index ’start’ and is of maximum size ’len’.
