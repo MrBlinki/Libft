@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 15:10:56 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:23:36 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -242,5 +242,20 @@ int	main(void)
 	printf("Result of the copy : %s\n", copy);
 	printf("len of the copy: %ld\n", ft_strlen(copy));
 	free(copy);
+	printf("\n========== FT_SUBSTR ==========\n");
+	char	*s1 = "Hello Nice and Beautiful World !";
+	char	*substr;
+	substr = (void *)0;
+	substr = ft_substr(s1, 6, 4);
+	printf("Substring: %s\n", substr);
+	substr = ft_substr(s1, 0, 5);
+	printf("Substring: %s\n", substr);
+	substr = ft_substr(s1, 15, 9);
+	printf("Substring: %s\n", substr);
+	substr = ft_substr(s1, 0, 0);
+	printf("Substring: %s\n", substr);
+	substr = ft_substr(s1, 350, 42);
+	printf("Substring: %s\n", substr);
+	free(substr);
 	return (0);
 }
