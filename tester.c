@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/19 14:23:36 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/19 15:03:24 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,19 +243,31 @@ int	main(void)
 	printf("len of the copy: %ld\n", ft_strlen(copy));
 	free(copy);
 	printf("\n========== FT_SUBSTR ==========\n");
-	char	*s1 = "Hello Nice and Beautiful World !";
+	char	*s = "Hello Nice and Beautiful World !";
 	char	*substr;
 	substr = (void *)0;
-	substr = ft_substr(s1, 6, 4);
+	substr = ft_substr(s, 6, 4);
 	printf("Substring: %s\n", substr);
-	substr = ft_substr(s1, 0, 5);
+	substr = ft_substr(s, 0, 5);
 	printf("Substring: %s\n", substr);
-	substr = ft_substr(s1, 15, 9);
+	substr = ft_substr(s, 15, 9);
 	printf("Substring: %s\n", substr);
-	substr = ft_substr(s1, 0, 0);
+	substr = ft_substr(s, 0, 0);
 	printf("Substring: %s\n", substr);
-	substr = ft_substr(s1, 350, 42);
+	substr = ft_substr(s, 350, 42);
 	printf("Substring: %s\n", substr);
 	free(substr);
+	printf("\n========== FT_STRJOIN ==========\n");
+	char	*joined_str;
+	joined_str = (void *)0;
+	joined_str = ft_strjoin("Hello", "World");
+	printf("Joined string : %s\n", joined_str);
+	joined_str = ft_strjoin("", "World");
+	printf("Joined string : %s\n", joined_str);
+	joined_str = ft_strjoin("Hello", "");
+	printf("Joined string : %s\n", joined_str);
+	joined_str = ft_strjoin("", "");
+	printf("Joined string : %s\n", joined_str);
+	free(joined_str);
 	return (0);
 }
