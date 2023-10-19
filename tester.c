@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/19 15:03:24 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/19 18:42:55 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -248,12 +248,16 @@ int	main(void)
 	substr = (void *)0;
 	substr = ft_substr(s, 6, 4);
 	printf("Substring: %s\n", substr);
+	free(substr);
 	substr = ft_substr(s, 0, 5);
 	printf("Substring: %s\n", substr);
+	free(substr);
 	substr = ft_substr(s, 15, 9);
 	printf("Substring: %s\n", substr);
+	free(substr);
 	substr = ft_substr(s, 0, 0);
 	printf("Substring: %s\n", substr);
+	free(substr);
 	substr = ft_substr(s, 350, 42);
 	printf("Substring: %s\n", substr);
 	free(substr);
@@ -262,12 +266,36 @@ int	main(void)
 	joined_str = (void *)0;
 	joined_str = ft_strjoin("Hello", "World");
 	printf("Joined string : %s\n", joined_str);
+	free(joined_str);
 	joined_str = ft_strjoin("", "World");
 	printf("Joined string : %s\n", joined_str);
+	free(joined_str);
 	joined_str = ft_strjoin("Hello", "");
 	printf("Joined string : %s\n", joined_str);
+	free(joined_str);
 	joined_str = ft_strjoin("", "");
 	printf("Joined string : %s\n", joined_str);
 	free(joined_str);
+	printf("\n========== FT_STRTRIM ==========\n");
+	char	*trimmed_str;
+	trimmed_str = (void *)0;
+	trimmed_str = ft_strtrim("abbaHello Worldbbab", "ab");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("abbaHello Worldbbab", "");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("", "ab");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("abbaHello abba Worldbbab", "ab");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("abbaHbbab", "ab");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("abbabbab", "ab");
+	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
 	return (0);
 }
