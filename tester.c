@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/21 21:01:58 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/23 16:27:55 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -298,14 +298,16 @@ int	main(void)
 	printf("Trimmed string: %s\n", trimmed_str);
 	free(trimmed_str);
 	printf("\n========== FT_SPLIT ==========\n");
+	int		i;
 	char	**splitted;
+	i = 0;
 	splitted = (void *)0;
-	splitted = ft_split("Hello World", ' ');
-	while (*splitted)
+	splitted = ft_split("   Hello   World !!! ", ' ');
+	while (splitted[i])
 	{
-		printf("Word: %s\n", *splitted);
-		free(*splitted);
-		splitted++;
+		printf("Word: %s\n", splitted[i]);
+		free(splitted[i]);
+		i++;
 	}
 	free(splitted);
 	return (0);
