@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 16:37:37 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/24 17:47:51 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ char	f(unsigned int i, char c)
 {
 	(void)i;
 	return (c - 32);
+}
+
+void	f2(unsigned int i, char *c)
+{
+	(void)i;
+	*c -= 32;
 }
 
 int	main(void)
@@ -347,5 +353,11 @@ int	main(void)
 	strmapi = ft_strmapi("hello", f);
 	printf("String returned by ft_strmapi: %s\n", strmapi);
 	free(strmapi);
+	printf("\n========== FT_STRITERI ==========\n");
+	char	*striteri;
+	striteri = ft_strdup("hello");
+	ft_striteri(striteri, f2);
+	printf("String modified by ft_striteri: %s\n", striteri);
+	free(striteri);
 	return (0);
 }
