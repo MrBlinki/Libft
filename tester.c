@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 18:23:26 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/24 18:57:22 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -367,5 +367,8 @@ int	main(void)
 	ft_putstr_fd("Written with ft_putstr_fd\n", 1);
 	printf("\n========== FT_PUTENDL_FD ==========\n");
 	ft_putendl_fd("Written with ft_putendl_fd (no \\n)", 1);
+	printf("\n========== FT_PUTNBR_FD ==========\n");
+	ft_putnbr_fd(42, 1);
+	ft_putchar_fd('\n', 1);
 	return (0);
 }
