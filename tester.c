@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/23 16:27:55 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/24 14:34:14 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
+#include <limits.h>
 
 // BSD lib installed for ubuntu
 #ifdef __linux__
@@ -310,5 +311,29 @@ int	main(void)
 		i++;
 	}
 	free(splitted);
+	printf("\n========== FT_ITOA ==========\n");
+	char	*num;
+	num = (void *)0;
+	num = ft_itoa(42);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(-42);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(1);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(-1);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(0);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(INT_MAX);
+	printf("Number as a string: %s\n", num);
+	free(num);
+	num = ft_itoa(INT_MIN);
+	printf("Number as a string: %s\n", num);
+	free(num);
 	return (0);
 }
