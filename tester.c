@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 14:34:14 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/24 16:37:37 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 #ifdef __linux__
 # include <bsd/string.h>
 #endif
+
+char	f(unsigned int i, char c)
+{
+	(void)i;
+	return (c - 32);
+}
 
 int	main(void)
 {
@@ -335,5 +341,11 @@ int	main(void)
 	num = ft_itoa(INT_MIN);
 	printf("Number as a string: %s\n", num);
 	free(num);
+	printf("\n========== FT_STRMAPI ==========\n");
+	char	*strmapi;
+	strmapi = (void *)0;
+	strmapi = ft_strmapi("hello", f);
+	printf("String returned by ft_strmapi: %s\n", strmapi);
+	free(strmapi);
 	return (0);
 }
