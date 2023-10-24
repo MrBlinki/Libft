@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 17:47:51 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/24 17:53:36 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -359,5 +359,9 @@ int	main(void)
 	ft_striteri(striteri, f2);
 	printf("String modified by ft_striteri: %s\n", striteri);
 	free(striteri);
+	printf("\n========== FT_PUTCHAR_FD ==========\n");
+	ft_putchar_fd('4', 1);
+	ft_putchar_fd('2', 1);
+	ft_putchar_fd('\n', 1);
 	return (0);
 }
