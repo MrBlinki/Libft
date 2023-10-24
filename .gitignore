@@ -1,5 +1,8 @@
-# Ignore all object files (.o)
+# All object files (.o)
 *.o
 
-# Ignore executables (.out)
+# Executables (.out)
 *.out
+
+# VSCode folder
+.vscode/
