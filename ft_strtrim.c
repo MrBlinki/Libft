@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:08:21 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/19 18:52:53 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 15:48:12 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (end >= start)
 		trimmed_len = (end - start) + 2;
 	else
-		return ((void *)0);
+		trimmed_len = 1;
 	str = ft_calloc(trimmed_len, sizeof(char));
 	if (!str)
 		return ((void *)0);
@@ -63,7 +63,8 @@ static char const	*get_str_end(char const *s1, char const *set)
 	size_t	i;
 
 	i = 0;
-	s1 += ft_strlen(s1) - 1;
+	if (ft_strlen(s1) > 0)
+		s1 += ft_strlen(s1) - 1;
 	while (set[i])
 	{
 		if (set[i] == *s1)
