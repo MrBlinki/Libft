@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 10:25:37 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:20:40 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,9 @@ int	main(void)
 	char	dst[6];
 	write(1, "ft_memcpy 6 bytes from src, dst: ", 33);
 	write(1, ft_memcpy(dst, src, 6), 6);
+	write(1, "\n", 1);
+	write(1, "ft_memcpy with NULL for dst and src : ", 38);
+	write(1, ft_memcpy(((void *)0), ((void *)0), 3), 3);
 	write(1, "\n", 1);
 	printf("\n========== FT_MEMMOVE ==========\n");
 	char	src2[12] = "Hello World";
