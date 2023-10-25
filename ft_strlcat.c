@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:37:13 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 09:23:24 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:51:32 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dstlen = ft_strlen(dst);
 	i = ft_strlen(dst);
 	j = 0;
-	while (i + 1 < dstsize)
+	while (i + 1 < dstsize && src[j])
 		dst[i++] = src[j++];
 	if (dstsize > 0)
 		dst[i] = '\0';
