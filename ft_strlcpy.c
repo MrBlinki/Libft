@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:10:45 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/16 16:39:29 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:40:48 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (i + 1 < dstsize)
+	while (i + 1 < dstsize && src[i])
 	{
 		dst[i] = src[i];
 		i++;
