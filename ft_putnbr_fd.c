@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:35:21 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 18:57:51 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 10:30:59 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,24 @@
 // Outputs the integer ’n’ to the given file descriptor.
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 10)
-		write(fd, &(n) + '0', 1);
+	char	c;
+	long	ln;
+
+	c = 0;
+	ln = (long)n;
+	if (ln < 0)
+	{
+		write(fd, "-", 1);
+		ln = -ln;
+	}
+	if (ln < 10)
+	{
+		c = ln + '0';
+		write(fd, &(c), 1);
+	}
 	else
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(ln / 10, fd);
+		ft_putnbr_fd(ln % 10, fd);
 	}
 }
