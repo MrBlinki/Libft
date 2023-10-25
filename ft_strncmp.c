@@ -6,11 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:17:18 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 14:01:10 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 11:57:47 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>	
+#include <stdlib.h>	
 
 // Compares s1 and s2 on n characters
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

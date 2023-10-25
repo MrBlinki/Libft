@@ -6,3 +6,6 @@
 
 # VSCode folder
 .vscode/
+
+# Archive files
+*.a

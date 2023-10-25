@@ -6,11 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:05:33 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/15 16:20:16 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 11:57:42 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
 // Writes n 0 bytes to the string s
 void	ft_bzero(void *s, size_t n)

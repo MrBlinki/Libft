@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -r $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
 #Each .o file depends on the .c with the same name
 %.o : %.c

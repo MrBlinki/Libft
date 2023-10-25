@@ -6,11 +6,11 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:56:07 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/16 09:56:33 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 11:57:45 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
 // Copies n bytes from src to dst
 void	*ft_memcpy(void *dst, const void *src, size_t n)
