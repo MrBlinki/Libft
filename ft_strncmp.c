@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:17:18 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 11:57:47 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:28:04 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (s1[i] > s2[i])
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
 			return (1);
-		if (s1[i] < s2[i])
+		if ((unsigned char)s1[i] < (unsigned char)s2[i])
 			return (-1);
 		i++;
 	}
