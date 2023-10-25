@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:49:46 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/17 13:04:22 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:23:43 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strrchr(const char *s, int c)
 	ptr = (void *)0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			ptr = (char *)s;
 		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return (ptr);
 }
