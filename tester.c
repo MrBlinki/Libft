@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 13:37:37 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:16:22 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,6 +158,10 @@ int	main(void)
 	printf("Looking for 'A' with ft_strchr:		%p\n", ft_strchr(str_tosearch, 'A'));
 	printf("Looking for '\\0' with strchr:		%p\n", strchr(str_tosearch, '\0'));
 	printf("Looking for '\\0' with ft_strchr:	%p\n", ft_strchr(str_tosearch, '\0'));
+	printf("Looking for 'e' in \"teste\" with strchr:		%p\n", strchr("teste", 'e'));
+	printf("Looking for 'e' in \"teste\" with ft_strchr:	%p\n", ft_strchr("teste", 'e'));
+	printf("Looking for '\\0' in \"teste\" with strchr:	%p\n", strchr("teste", '\0'));
+	printf("Looking for '\\0' in \"teste\" with ft_strchr:	%p\n", ft_strchr("teste", '\0'));
 	printf("\n========== FT_STRRCHR ==========\n");
 	printf("Looking for 'd' with strrchr:		%p\n", strrchr(str_tosearch, 'm'));
 	printf("Looking for 'd' with ft_strrchr:	%p\n", ft_strrchr(str_tosearch, 'm'));
