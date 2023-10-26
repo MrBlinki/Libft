@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:08:21 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 15:48:12 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 15:38:55 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = (void *)0;
 	start = get_str_start(s1, set);
 	end = get_str_end(s1, set);
-	if (end >= start)
+	if (end > start)
 		trimmed_len = (end - start) + 2;
 	else
 		trimmed_len = 1;

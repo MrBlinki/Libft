@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:42:45 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/26 15:03:05 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 15:24:44 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ char	**ft_split(char const *s, char c)
 	char	**splitted;
 
 	if (!s)
-		return (NULL);
+		return ((void *)0);
 	i = 0;
 	splitted = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (!splitted)
-		return (NULL);
+		return ((void *)0);
 	while (*s)
 	{
 		while (*s == c)
@@ -41,7 +41,7 @@ char	**ft_split(char const *s, char c)
 			if (!splitted[i])
 			{
 				free_2d(splitted, i);
-				return (NULL);
+				return ((void *)0);
 			}
 			i++;
 		}
