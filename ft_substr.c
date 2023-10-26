@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:27:10 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/19 19:49:33 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 09:15:12 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,18 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
+	size_t	s_len;
 
 	substr = (void *)0;
-	substr = ft_calloc(len, sizeof(char));
+	s_len = ft_strlen(s);
+	if (len > s_len)
+		len = s_len;
+	substr = ft_calloc(len + 1, sizeof(char));
 	if (!substr)
 		return ((void *)0);
-	if (start > ft_strlen(s))
-		return ((void *)0);
-	ft_strlcpy(substr, s + start, len + 1);
+	if (start > s_len)
+		substr[0] = '\0';
+	else
+		ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
