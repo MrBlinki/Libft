@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:08:21 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/26 15:38:55 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 16:31:13 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = get_str_end(s1, set);
 	if (end > start)
 		trimmed_len = (end - start) + 2;
+	else if (ft_strlen(s1) > 0)
+		trimmed_len = 2;
 	else
 		trimmed_len = 1;
 	str = ft_calloc(trimmed_len, sizeof(char));

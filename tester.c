@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/26 13:55:35 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 16:20:37 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -316,6 +316,9 @@ int	main(void)
 	free(trimmed_str);
 	trimmed_str = ft_strtrim("abbabbab", "ab");
 	printf("Trimmed string: %s\n", trimmed_str);
+	free(trimmed_str);
+	trimmed_str = ft_strtrim("abcdba", "acb");
+	printf("Francinette - Trimmed string: %s\n", trimmed_str);
 	free(trimmed_str);
 	printf("\n========== FT_SPLIT ==========\n");
 	int		i;
