@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:42:45 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/23 17:06:28 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 15:03:05 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	count_words(char const *s, char c);
 static char		*copy_word(char const *s, char c);
-static void		free_2d(char **array);
+static void		free_2d(char **array, size_t i);
 static size_t	get_word_len(char const *s, char c);
 
 // Allocates (with malloc(3)) and returns an array of strings obtained by
@@ -25,11 +25,12 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	char	**splitted;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	splitted = (void *)0;
 	splitted = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (!splitted)
-		return ((void *)0);
+		return (NULL);
 	while (*s)
 	{
 		while (*s == c)
@@ -38,7 +39,10 @@ char	**ft_split(char const *s, char c)
 		{
 			splitted[i] = copy_word(s, c);
 			if (!splitted[i])
-				free_2d(splitted);
+			{
+				free_2d(splitted, i);
+				return (NULL);
+			}
 			i++;
 		}
 		while (*s && *s != c)
@@ -84,12 +88,15 @@ static char	*copy_word(char const *s, char c)
 	return (word);
 }
 
-static void	free_2d(char **array)
+static void	free_2d(char **array, size_t i)
 {
-	while (*array)
+	size_t	j;
+
+	j= 0;
+	while (j < i)
 	{
-		free(*array);
-		array++;
+		free(array[j]);
+		j++;
 	}
 	free(array);
 }

@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 14:16:22 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 13:55:35 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -322,7 +322,7 @@ int	main(void)
 	char	**splitted;
 	i = 0;
 	splitted = (void *)0;
-	splitted = ft_split("   Hello   World !!! ", ' ');
+	splitted = ft_split("hello!", ' ');
 	while (splitted[i])
 	{
 		printf("Word: %s\n", splitted[i]);
