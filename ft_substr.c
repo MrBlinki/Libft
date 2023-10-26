@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:27:10 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/26 09:15:12 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/26 16:01:09 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (len > s_len)
 		len = s_len;
+	if (len > (s_len - start))
+		len = s_len - start;
+	if (start > s_len)
+		len = 0;
 	substr = ft_calloc(len + 1, sizeof(char));
 	if (!substr)
 		return ((void *)0);
