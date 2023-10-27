@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 22:29:49 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/28 00:04:47 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	f2(unsigned int i, char *c)
 void	del(void *tofree)
 {
 	printf("The del function was called\n");
+	// (void)tofree;
 	printf("Deleting content : %s\n", (char *)tofree);
-	// free(tofree);
 }
 
 int	main(void)
@@ -444,6 +444,8 @@ int	main(void)
 	t_list *node_to_del;
 	node_to_del = ft_lstnew("please delete me");
 	ft_lstdelone(node_to_del, del);
+	printf("\n========== FT_LSTCLEAR ==========\n");
+	ft_lstclear(&head, del);
 	free(node0);
 	free(node1);
 	free(node2);
