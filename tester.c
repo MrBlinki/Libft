@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 17:50:24 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 18:40:33 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -399,6 +399,15 @@ int	main(void)
 	lstnew = ft_lstnew("Hello World");
 	printf("Content of lstnew : %s\n", lstnew->content);
 	printf("Next node : %p\n", lstnew->next);
+	printf("\n========== FT_LSTADD_FRONT ==========\n");
+	t_list	*lst;
+	lst = ft_lstnew("Origin lst");
+	ft_lstadd_front(&lst, lstnew);
+	printf("Content of lstnew : %s\n", lstnew->content);
+	printf("Next node : %p\n", lstnew->next);
+	printf("Content of lst : %s\n", lst->content);
+	printf("Next node : %p\n", lst->next);
+	free(lstnew->next);
 	free(lstnew);
 	return (0);
 }
