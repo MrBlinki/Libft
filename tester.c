@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 20:18:38 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 20:29:28 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -421,6 +421,8 @@ int	main(void)
 	printf("Next of node0:		%p\n", node0->next);
 	printf("\n========== FT_LSTSIZE ==========\n");
 	printf("Size of list (5 nodes): %d\n", ft_lstsize(head));
+	printf("\n========== FT_LSTLAST ==========\n");
+	printf("Content of last node: %s\n", ft_lstlast(head)->content);
 	free(node0);
 	free(node1);
 	free(node2);

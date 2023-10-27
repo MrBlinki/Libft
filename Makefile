@@ -8,7 +8,7 @@ ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 #Each source file, ".c" replaced by ".o"
 OBJ = $(SRC:.c=.o)
 
-SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
 OBJBONUS = $(SRCBONUS:.c=.o)
 
 CC = cc
