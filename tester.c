@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 18:40:33 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 20:18:38 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -399,15 +399,32 @@ int	main(void)
 	lstnew = ft_lstnew("Hello World");
 	printf("Content of lstnew : %s\n", lstnew->content);
 	printf("Next node : %p\n", lstnew->next);
+	free (lstnew);
 	printf("\n========== FT_LSTADD_FRONT ==========\n");
-	t_list	*lst;
-	lst = ft_lstnew("Origin lst");
-	ft_lstadd_front(&lst, lstnew);
-	printf("Content of lstnew : %s\n", lstnew->content);
-	printf("Next node : %p\n", lstnew->next);
-	printf("Content of lst : %s\n", lst->content);
-	printf("Next node : %p\n", lst->next);
-	free(lstnew->next);
-	free(lstnew);
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*node4;
+	t_list	*head;
+	node1 = ft_lstnew("node1");
+	node2 = ft_lstnew("node2");
+	node3 = ft_lstnew("node3");
+	node4 = ft_lstnew("node4");
+	head = node1;
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = node4;
+	printf("Address of node1:	%p\n", node1);
+	t_list	*node0;
+	node0 = ft_lstnew("node0");
+	ft_lstadd_front(&head, node0);
+	printf("Next of node0:		%p\n", node0->next);
+	printf("\n========== FT_LSTSIZE ==========\n");
+	printf("Size of list (5 nodes): %d\n", ft_lstsize(head));
+	free(node0);
+	free(node1);
+	free(node2);
+	free(node3);
+	free(node4);
 	return (0);
 }
