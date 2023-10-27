@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 20:29:28 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 21:12:57 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -423,10 +423,21 @@ int	main(void)
 	printf("Size of list (5 nodes): %d\n", ft_lstsize(head));
 	printf("\n========== FT_LSTLAST ==========\n");
 	printf("Content of last node: %s\n", ft_lstlast(head)->content);
+	printf("\n========== FT_LSTADD_BACK ==========\n");
+	printf("Content of last node (before): %s\n", ft_lstlast(head)->content);
+	printf("Size of list (before): %d\n", ft_lstsize(head));
+	t_list	*node5;
+	node5 = ft_lstnew("node5");
+	ft_lstadd_back(&head, node5);
+	printf("Content of last node (after): %s\n", ft_lstlast(head)->content);
+	printf("Size of list (after): %d\n", ft_lstsize(head));
+	printf("Address of last node : %p\n", ft_lstlast(head));
+	printf("Next of node 4 (should equal last node) : %p\n", node4->next);
 	free(node0);
 	free(node1);
 	free(node2);
 	free(node3);
 	free(node4);
+	free(node5);
 	return (0);
 }
