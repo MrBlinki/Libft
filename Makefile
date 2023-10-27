@@ -8,23 +8,29 @@ ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 #Each source file, ".c" replaced by ".o"
 OBJ = $(SRC:.c=.o)
 
+SRCBONUS = ft_lstnew.c
+OBJBONUS = $(SRCBONUS:.c=.o)
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 #Targets that aren't files
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
+bonus : $(OBJ) $(OBJBONUS)
+	ar -rcs $(NAME) $(OBJ) $(OBJBONUS)
+
 #Each .o file depends on the .c with the same name
 %.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean :
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJBONUS)
 
 fclean : clean
 	rm -f $(NAME)
@@ -41,8 +47,8 @@ endif
 
 test : a.out
 
-a.out : $(OBJ) tester.o
-	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@ $(BSDFLAG)
+a.out : $(OBJ) $(OBJBONUS) tester.o
+	$(CC) $(CFLAGS) $(OBJ) $(OBJBONUS) tester.o -o $@ $(BSDFLAG)
 
 tester.o : tester.c
 	$(CC) $(CFLAGS) -c -o $@ $<

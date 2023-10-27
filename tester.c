@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 15:12:48 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 17:50:24 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	f2(unsigned int i, char *c)
 
 int	main(void)
 {
+	printf("\n================ MANDATORY PART ================\n\n");
 	printf("\n========== FT_ISALPHA ==========\n");
 	printf("isalpha(4): 		%d\n", isalpha(4));
 	printf("ft_isalpha(4): 		%d\n", ft_isalpha(4));
@@ -392,5 +393,12 @@ int	main(void)
 	ft_putchar_fd('\n', 1);
 	ft_putnbr_fd(INT_MIN, 1);
 	ft_putchar_fd('\n', 1);
+	printf("\n================ BONUS PART ================\n\n");
+	printf("\n========== FT_LSTNEW ==========\n");
+	t_list	*lstnew;
+	lstnew = ft_lstnew("Hello World");
+	printf("Content of lstnew : %s\n", lstnew->content);
+	printf("Next node : %p\n", lstnew->next);
+	free(lstnew);
 	return (0);
 }
