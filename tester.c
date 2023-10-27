@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 21:30:31 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 22:29:49 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ void	f2(unsigned int i, char *c)
 
 void	del(void *tofree)
 {
-	free(tofree);
+	printf("The del function was called\n");
+	printf("Deleting content : %s\n", (char *)tofree);
+	// free(tofree);
 }
 
 int	main(void)
@@ -402,7 +404,7 @@ int	main(void)
 	printf("\n========== FT_LSTNEW ==========\n");
 	t_list	*lstnew;
 	lstnew = ft_lstnew("Hello World");
-	printf("Content of lstnew : %s\n", lstnew->content);
+	printf("Content of lstnew : %s\n", (char *)lstnew->content);
 	printf("Next node : %p\n", lstnew->next);
 	free (lstnew);
 	printf("\n========== FT_LSTADD_FRONT ==========\n");
@@ -427,14 +429,14 @@ int	main(void)
 	printf("\n========== FT_LSTSIZE ==========\n");
 	printf("Size of list (5 nodes): %d\n", ft_lstsize(head));
 	printf("\n========== FT_LSTLAST ==========\n");
-	printf("Content of last node: %s\n", ft_lstlast(head)->content);
+	printf("Content of last node: %s\n", (char *)ft_lstlast(head)->content);
 	printf("\n========== FT_LSTADD_BACK ==========\n");
-	printf("Content of last node (before): %s\n", ft_lstlast(head)->content);
+	printf("Content of last node (before): %s\n", (char *)ft_lstlast(head)->content);
 	printf("Size of list (before): %d\n", ft_lstsize(head));
 	t_list	*node5;
 	node5 = ft_lstnew("node5");
 	ft_lstadd_back(&head, node5);
-	printf("Content of last node (after): %s\n", ft_lstlast(head)->content);
+	printf("Content of last node (after): %s\n", (char *)ft_lstlast(head)->content);
 	printf("Size of list (after): %d\n", ft_lstsize(head));
 	printf("Address of last node : %p\n", ft_lstlast(head));
 	printf("Next of node 4 (should equal last node) : %p\n", node4->next);
@@ -442,7 +444,6 @@ int	main(void)
 	t_list *node_to_del;
 	node_to_del = ft_lstnew("please delete me");
 	ft_lstdelone(node_to_del, del);
-	printf("Content of delete node: %s\n", node_to_del->content);
 	free(node0);
 	free(node1);
 	free(node2);
