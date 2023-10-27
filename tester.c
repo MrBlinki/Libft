@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/27 21:12:57 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 21:30:31 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ void	f2(unsigned int i, char *c)
 {
 	(void)i;
 	*c -= 32;
+}
+
+void	del(void *tofree)
+{
+	free(tofree);
 }
 
 int	main(void)
@@ -433,6 +438,11 @@ int	main(void)
 	printf("Size of list (after): %d\n", ft_lstsize(head));
 	printf("Address of last node : %p\n", ft_lstlast(head));
 	printf("Next of node 4 (should equal last node) : %p\n", node4->next);
+	printf("\n========== FT_LSTDELONE ==========\n");
+	t_list *node_to_del;
+	node_to_del = ft_lstnew("please delete me");
+	ft_lstdelone(node_to_del, del);
+	printf("Content of delete node: %s\n", node_to_del->content);
 	free(node0);
 	free(node1);
 	free(node2);
