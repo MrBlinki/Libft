@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:42:45 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/26 15:24:44 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/27 15:12:05 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	char	**splitted;
 
-	if (!s)
-		return ((void *)0);
 	i = 0;
 	splitted = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (!splitted)
@@ -55,6 +53,8 @@ static size_t	count_words(char const *s, char c)
 {
 	size_t	words_count;
 
+	if (!(*s))
+		return (0);
 	words_count = 0;
 	while (*s == c)
 		s++;
@@ -92,7 +92,7 @@ static void	free_2d(char **array, size_t i)
 {
 	size_t	j;
 
-	j= 0;
+	j = 0;
 	while (j < i)
 	{
 		free(array[j]);
