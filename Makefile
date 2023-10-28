@@ -23,8 +23,8 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-bonus : $(OBJ) $(OBJBONUS)
-	ar -rcs $(NAME) $(OBJ) $(OBJBONUS)
+bonus : $(OBJBONUS)
+	ar -rcs $(NAME) $(OBJBONUS)
 
 #Each .o file depends on the .c with the same name
 %.o : %.c
