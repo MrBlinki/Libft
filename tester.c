@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/28 09:34:25 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/28 10:54:07 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,30 @@ void	f2(unsigned int i, char *c)
 void	del(void *tofree)
 {
 	printf("The del function was called\n");
-	// (void)tofree;
 	printf("Deleting content : %s\n", (char *)tofree);
+	tofree = (void *)0;
 }
 
-void	flst(void *content)
+void	f_print_lstcontent(void *content)
 {
 	printf("%s\n", content);
+}
+
+void	*f_lst_toupper(void *content)
+{
+	char	*new_content;
+	int		i;
+
+	i = 0;
+	new_content = ft_calloc(ft_strlen(content) + 1, sizeof(char));
+	if (!new_content)
+		return ((void *)0);
+	while (((char *)content)[i])
+	{
+		new_content[i] = ft_toupper(((char *)content)[i]);
+		i++;
+	}
+	return (new_content);
 }
 
 int	main(void)
@@ -450,7 +467,12 @@ int	main(void)
 	node_to_del = ft_lstnew("please delete me");
 	ft_lstdelone(node_to_del, del);
 	printf("\n========== FT_LSTITER ==========\n");
-	ft_lstiter(head, flst);
+	ft_lstiter(head, f_print_lstcontent);
+	printf("\n========== FT_LSTMAP ==========\n");
+	t_list	*new_list;
+	new_list = ft_lstmap(head, f_lst_toupper, del);
+	ft_lstiter(new_list, f_print_lstcontent);
+	ft_lstclear(&new_list, del);
 	printf("\n========== FT_LSTCLEAR ==========\n");
 	ft_lstclear(&head, del);
 	// free(node0);
