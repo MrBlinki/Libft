@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 22:13:09 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/28 00:03:55 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/28 09:02:12 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	temp = *lst;
-	while (temp)
+	while (*lst)
 	{
-		ft_lstdelone(temp, del);
-		temp = temp->next;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
 	*lst = (void *)0;
-	free(*lst);
 }

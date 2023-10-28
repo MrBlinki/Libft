@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/28 00:04:47 by maroth           ###   ########.fr       */
+/*   Updated: 2023/10/28 08:31:16 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -446,11 +446,11 @@ int	main(void)
 	ft_lstdelone(node_to_del, del);
 	printf("\n========== FT_LSTCLEAR ==========\n");
 	ft_lstclear(&head, del);
-	free(node0);
-	free(node1);
-	free(node2);
-	free(node3);
-	free(node4);
-	free(node5);
+	// free(node0);
+	// free(node1);
+	// free(node2);
+	// free(node3);
+	// free(node4);
+	// free(node5);
 	return (0);
 }
