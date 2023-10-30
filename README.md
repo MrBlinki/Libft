@@ -1,6 +1,6 @@
 # Libft
-42Cursus - My very first own library
 
-This repo contains my libft library, first project of the 42Cursus.
+## Description
+This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.
 
 The lib will possibly evolve in the future
