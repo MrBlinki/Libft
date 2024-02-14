@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:09:51 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/25 11:57:46 by maroth           ###   ########.fr       */
+/*   Updated: 2024/02/14 16:15:59 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*s++)
+	while (s && *s++)
 		len++;
 	return (len);
 }

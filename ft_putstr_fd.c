@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:55:34 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 18:09:48 by maroth           ###   ########.fr       */
+/*   Updated: 2024/02/14 16:14:54 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // Outputs the string ’s’ to the given file descriptor.
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	while (s && *s)
 	{
 		ft_putchar_fd(*s, fd);
 		s++;
