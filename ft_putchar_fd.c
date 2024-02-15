@@ -6,14 +6,15 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:49:23 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/24 17:53:48 by maroth           ###   ########.fr       */
+/*   Updated: 2024/02/15 11:35:04 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 // Outputs the character ’c’ to the given file descriptor.
-void	ft_putchar_fd(char c, int fd)
+// Returns the write() result -> Bytes written or -1 if error
+ssize_t	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
