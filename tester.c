@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:12:28 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/28 10:54:07 by maroth           ###   ########.fr       */
+/*   Updated: 2024/02/15 16:35:14 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -481,5 +481,7 @@ int	main(void)
 	// free(node3);
 	// free(node4);
 	// free(node5);
+	ft_printf("\n========== FT_PRINTF ==========\n");
+	ft_printf("Wow, %d is such a %s school\n", 42, "cool");
 	return (0);
 }

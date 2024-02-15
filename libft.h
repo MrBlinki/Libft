@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:26:56 by maroth            #+#    #+#             */
-/*   Updated: 2024/02/15 11:47:10 by maroth           ###   ########.fr       */
+/*   Updated: 2024/02/15 16:28:37 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 // Part1 - Libc functions
 
@@ -76,5 +77,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// Added with ft_printf
+char	*ft_utoa(unsigned int n);
+char	*ft_utohex(unsigned long n);
 
 #endif
