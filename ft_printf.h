@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:25:12 by maroth            #+#    #+#             */
-/*   Updated: 2024/02/15 16:34:52 by maroth           ###   ########.fr       */
+/*   Updated: 2024/03/13 10:30:15 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-#include "libft.h"
+# include "libft.h"
 
 int		ft_printf(const char *format, ...);
 int		print_percent(void);

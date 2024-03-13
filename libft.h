@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:26:56 by maroth            #+#    #+#             */
-/*   Updated: 2024/02/15 16:28:37 by maroth           ###   ########.fr       */
+/*   Updated: 2024/03/13 10:22:16 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <limits.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
 

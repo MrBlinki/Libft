@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:29:39 by maroth            #+#    #+#             */
-/*   Updated: 2023/10/18 12:16:46 by maroth           ###   ########.fr       */
+/*   Updated: 2024/03/13 10:23:05 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 // Returns str as an int (0 if conversion impossible)
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
+	long	res;
+	int		sign;
 
 	res = 0;
 	sign = 1;
@@ -34,5 +34,8 @@ int	ft_atoi(const char *str)
 		res = res * 10 + (*str - '0');
 		str++;
 	}
+	res *= sign;
+	if (res > INT_MAX || res < INT_MIN)
+		return (0);
 	return (res * sign);
 }
