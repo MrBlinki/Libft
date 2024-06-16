@@ -11,6 +11,7 @@ ft_lstiter.c ft_lstmap.c ft_printf_formats.c ft_printf_hex.c ft_printf.c \
 ft_utoa.c ft_utohex.c
 #Each source file, ".c" replaced by ".o"
 OBJ = $(SRC:.c=.o)
+OBJ_DIR = .obj
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -21,14 +22,17 @@ CFLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJ))
 
 #Each .o file depends on the .c with the same name
-%.o : %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+%.o : %.c $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c -o $(OBJ_DIR)/$@ $<
+
+$(OBJ_DIR) :
+	mkdir $@
 
 clean :
-	rm -f $(OBJ) $(OBJBONUS)
+	rm -rf $(OBJ_DIR)
 
 fclean : clean
 	rm -f $(NAME)
@@ -41,12 +45,12 @@ ifeq ($(UNAME_S),Linux)
 	BSDFLAG = -lbsd
 endif
 
-.PHONY : test tclean
+.PHONY : test tclean re
 
 test : a.out
 
-a.out : $(OBJ) $(OBJBONUS) tester.o
-	$(CC) $(CFLAGS) $(OBJ) $(OBJBONUS) tester.o -o $@ $(BSDFLAG)
+a.out : $(OBJ) tester.o
+	$(CC) $(CFLAGS) $(OBJ) tester.o -o $@ $(BSDFLAG)
 
 tester.o : tester.c
 	$(CC) $(CFLAGS) -c -o $@ $<

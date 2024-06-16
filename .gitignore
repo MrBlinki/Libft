@@ -1,5 +1,6 @@
 # All object files (.o)
 *.o
+.obj/
 
 # Executables (.out)
 *.out
