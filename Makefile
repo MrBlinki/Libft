@@ -10,8 +10,8 @@ ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
 ft_lstiter.c ft_lstmap.c ft_printf_formats.c ft_printf_hex.c ft_printf.c \
 ft_utoa.c ft_utohex.c
 #Each source file, ".c" replaced by ".o"
-OBJ = $(SRC:.c=.o)
 OBJ_DIR = .obj
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -19,17 +19,17 @@ CFLAGS = -Wall -Wextra -Werror
 #Targets that aren't files
 .PHONY : all clean fclean re bonus
 
-all : $(NAME)
-
-$(NAME) : $(OBJ)
-	ar -rcs $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJ))
-
-#Each .o file depends on the .c with the same name
-%.o : %.c $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c -o $(OBJ_DIR)/$@ $<
+all : $(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR) :
-	mkdir $@
+	mkdir -p $@
+
+$(NAME) : $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
+
+#Each .o file depends on the .c with the same name
+$(OBJ_DIR)/%.o : %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean :
 	rm -rf $(OBJ_DIR)
