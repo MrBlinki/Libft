@@ -6,7 +6,7 @@
 /*   By: maroth <maroth@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:26:56 by maroth            #+#    #+#             */
-/*   Updated: 2024/03/13 10:22:16 by maroth           ###   ########.fr       */
+/*   Updated: 2024/07/19 09:20:56 by maroth           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // Added with ft_printf
 char	*ft_utoa(unsigned int n);
 char	*ft_utohex(unsigned long n);
+
+// Added for minishell
+long	ft_atol(const char *str);
 
 #endif
